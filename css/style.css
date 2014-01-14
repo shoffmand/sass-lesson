@@ -1,0 +1,58 @@
+/*SASS variable*/
+/*Test mixin is used to pump out a red outline around the object*/
+/** {
+	@include test;
+}*/
+h1 {
+  border: 1px solid green;
+  font-family: Arial, sans-serif; }
+
+body {
+  width: 600px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid green;
+  outline: 1px solid red; }
+
+h2 {
+  border: 1px dotted red; }
+
+/*Main Navigation*/
+nav {
+  background-color: yellow; }
+  nav ul {
+    margin: 0;
+    padding: 0; }
+  @media (min-width: 30em) {
+    nav ul {
+      border: 5px solid orange;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      border-radius: 10px; } }
+  @media (min-width: 45em) {
+    nav ul {
+      width: 960px;
+      margin: 0;
+      padding: 0; }
+      nav ul:before, nav ul:after {
+        content: " ";
+        display: table; }
+      nav ul:after {
+        clear: both; }
+    nav li {
+      float: left;
+      margin-left: 1em;
+      border: 2px dashed red;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      border-radius: 5px; }
+      nav li:first-child {
+        margin-left: 0; }
+    nav a:hover {
+      color: green; } }
+
+footer {
+  border: 1px solid purple;
+  background-color: red; }

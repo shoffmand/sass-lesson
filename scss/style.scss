@@ -1,0 +1,37 @@
+$primary-font : Arial, sans-serif; /*SASS variable*/
+$primary-colour: green;
+$large-screen: 45em;
+$medium-screen: 30em;
+
+/*Test mixin is used to pump out a red outline around the object*/
+@mixin test() {
+	outline:1px solid red;
+}
+
+/** {
+	@include test;
+}*/
+
+@mixin border-radius($radius){
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+
+h1{ border:1px solid $primary-colour; font-family:$primary-font }
+body{
+width:600px;
+	padding: 0;
+	margin: 0;
+	border:1px solid $primary-colour;
+	@include test;
+}
+h2{
+	border:1px dotted red;
+}
+
+/*Main Navigation*/
+@import 'navigation';
+
+@import 'footer';

@@ -1,0 +1,45 @@
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+nav{
+	
+		background-color:yellow;
+		
+		ul{
+			margin:0;
+			padding:0;
+		}
+		
+		@media (min-width:$medium-screen){
+			ul{border:5px solid orange; @include border-radius(10px);}
+		}
+		
+		@media (min-width:$large-screen){
+		ul{
+		@include clearfix;
+			width:960px;
+			margin:0;
+			padding:0;
+		}
+		
+		li{
+			
+			float:left;
+			margin-left:1em;
+			border:2px dashed red;
+			@include border-radius(5px);
+			&:first-child{margin-left:0;}
+		}
+		a{
+			&:hover{ color:$primary-colour; }
+		}
+	}
+}
